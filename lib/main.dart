@@ -1,4 +1,6 @@
+import 'package:appfilmow_paula/landing_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
+        textTheme: GoogleFonts.getTextTheme(
+          'Inter',
+        ).apply(bodyColor: Colors.white, displayColor: Colors.white),
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
@@ -28,9 +32,19 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: const ColorScheme(
+          brightness: Brightness.light,
+          primary: Color(0xff32AB73),
+          onPrimary: Color(0xff121212),
+          secondary: Colors.transparent,
+          onSecondary: Color(0xff32A873),
+          error: Colors.red,
+          onError: Colors.white,
+          surface: Color(0xff121212),
+          onSurface: Colors.white,
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const LandingPage(),
     );
   }
 }
