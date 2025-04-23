@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 
-class PrimaryButton extends StatelessWidget {
+class SecondaryButton extends StatelessWidget {
   final void Function()? onPressed;
   final String text;
-  const PrimaryButton({super.key, required this.onPressed, required this.text});
+  const SecondaryButton({
+    super.key,
+    required this.onPressed,
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +19,7 @@ class PrimaryButton extends StatelessWidget {
         child: ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(
-            shape: const RoundedRectangleBorder(
-              side: BorderSide(color: Color(0xff32A873)),
-            ),
+            shape: const RoundedRectangleBorder(),
             backgroundColor: const Color(0xff32AB73),
           ),
           child: Text(

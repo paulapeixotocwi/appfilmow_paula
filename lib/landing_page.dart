@@ -1,3 +1,5 @@
+import 'package:appfilmow_paula/components/buttons/primary_button.dart';
+import 'package:appfilmow_paula/components/buttons/secundary_button.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -24,8 +26,8 @@ class LandingPage extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.black.withOpacity(.9),
               borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(50),
-                topRight: Radius.circular(50),
+                topLeft: Radius.circular(15),
+                topRight: Radius.circular(15),
               ),
             ),
             child: Column(
@@ -41,7 +43,8 @@ class LandingPage extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontWeight: FontWeight.w600, fontSize: 13),
                 ),
-                PrimaryButton(),
+                PrimaryButton(onPressed: () {}, text: "Login"),
+                SecondaryButton(onPressed: () {}, text: "Sign up"),
               ],
             ),
           ),
